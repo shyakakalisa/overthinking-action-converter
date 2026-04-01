@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overthinking → Action Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header class="hero">
+      <div class="hero-text">
+        <p class="tag">Decision Support Tool</p>
+        <h1>Overthinking → Action Converter</h1>
+        <p class="subtitle">
+          Turn messy thoughts into a clear summary, 3 simple actions, and an
+          overthinking score.
+        </p>
+      </div>
+    </header>
+
+    <main class="main-grid">
+      <section class="card input-card">
+        <h2>Your Situation</h2>
+        <label for="thoughtInput" class="label">Type what’s on your mind</label>
+        <textarea
+          id="thoughtInput"
+          placeholder="Example: I don’t know what to do about school, my portfolio, and feeling behind compared to everyone else..."
+        ></textarea>
+
+        <div class="button-row">
+          <button id="analyzeBtn">Convert to Action</button>
+          <button id="clearBtn" class="secondary">Clear</button>
+        </div>
+      </section>
+
+      <section class="card results-card">
+        <h2>Results</h2>
+
+        <div class="result-block">
+          <h3>Problem Summary</h3>
+          <p id="summaryText" class="placeholder">
+            Your summary will appear here.
+          </p>
+        </div>
+
+        <div class="result-block">
+          <h3>3 Simple Actions</h3>
+          <ol id="actionsList" class="actions-list">
+            <li>Action steps will appear here.</li>
+          </ol>
+        </div>
+
+        <div class="score-box">
+          <h3>Overthinking Score</h3>
+          <div id="scoreValue" class="score-value">0 / 100</div>
+          <p id="scoreNote" class="score-note">
+            Write something above to calculate your score.
+          </p>
+        </div>
+
+        <div class="save-row">
+          <button id="saveBtn" class="save-btn">Save Entry</button>
+        </div>
+      </section>
+    </main>
+
+    <section class="card history-card">
+      <div class="history-header">
+        <h2>Saved Entries</h2>
+        <button id="clearHistoryBtn" class="danger-btn">Clear All</button>
+      </div>
+
+      <div id="historyList" class="history-list">
+        <p class="placeholder">No saved entries yet.</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
